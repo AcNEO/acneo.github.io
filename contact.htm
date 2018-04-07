@@ -48,13 +48,19 @@
 	<script src="js/mince.js"></script>
 	<script src="js/sorrynoreg.js"></script>
 	<script src="js/getstarted.js"></script>
-	<script src='https://www.google.com/recaptcha/api.js' async defer></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
 	  gtag('config', 'UA-116929886-1');
 	</script>
+					<script type="text/javascript">
+					  var onloadCallback = function() {
+						grecaptcha.render('ggcptcha', {
+						  'sitekey' : '6Lftb1EUAAAAAHBts3zvb57HzkoQP2kDQnPIt2W4'
+						});
+					  };
+					</script>
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -127,7 +133,7 @@
 				<div class="col-md-12">
 					<div class="col-md-6 animate-box">
 					<h3>Get In Touch</h3>
-					<form id="gform" method="POST" data-email="clossotruth@gmail.com" action="https://script.google.com/macros/s/AKfycbzijhTKkxOZzozFuaw7qNdPhXZVA4kFq4d3xZ7fw_nTdsFGfKs/exec"> <!-- https://script.google.com/macros/s/AKfycbxFkjQyZmGTVE5lElOuJSu-ApyLmTjnHafP0cUpIMWGG5oYN7M/exec -->
+					<form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbzijhTKkxOZzozFuaw7qNdPhXZVA4kFq4d3xZ7fw_nTdsFGfKs/exec"> <!-- https://script.google.com/macros/s/AKfycbxFkjQyZmGTVE5lElOuJSu-ApyLmTjnHafP0cUpIMWGG5oYN7M/exec -->
 						<div class="row form-group">
 							<div class="col-md-12">
 								<label class="sr-only" for="username">Username</label>
@@ -158,14 +164,29 @@
 							</div>
 						</div>
 						<div class="row form-group">
+							<div id="ggcptcha"></div>
 								<div class="g-recaptcha" data-sitekey="6Lftb1EUAAAAAHBts3zvb57HzkoQP2kDQnPIt2W4"></div>
+								<span id="g-recaptcha-invalid" style="display:none">Complete the captha first!</span>
 							</div>
 						<div class="form-group">
 							<input type="submit" value="Send Message" class="btn btn-primary">
 						</div>
 
 					</form>	
+					<script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit' async defer></script>
 					</div>	
+					<div class="col-md-5 col-md-push-1 animate-box">
+						
+						<div class="gtco-contact-info">
+							<h3>More Info</h3>
+							<ul>
+								<li class="discord"> Discord: <a href="#" target="_blank">HyGlobalHD#2000</a></li>
+								<li class="url"> Website: <a href="https://acneo.github.io">acneo.github.io</a></li>
+							</ul>
+						</div>
+	
+	
+					</div>
 				</div>
 				</div>
 			</div>
@@ -183,7 +204,7 @@
 							<h3>Get In Touch</h3>
 							<ul class="gtco-quick-contact">
 								<ul>
-									<li>
+									<li> <!-- eg: https://discordapp.com/channels/@me/<id> --> 
 									<a href="https://discordapp.com/channels/@HyGlobalHD#2000" target="_blank"><i class="icon-chat"></i> Chat Via Discord</a>
 								</li>
 								</ul>
